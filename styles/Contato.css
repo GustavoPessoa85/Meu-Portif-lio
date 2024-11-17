@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela */
+}
+
+
+.conteudo {
+    padding: 80px;
+    border-radius: 60px;
+    background-color: rgba(180, 180, 180, 0.096);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.747);
+}
+
+
+.lista {
+    list-style-type: none; /* Remove o ponto */
+    position: relative; 
+    gap: 40px;
+}
+
+
+ul li{
+    width: 80px;
+    height: 80px;
+    background-color:  rgba(0, 0, 0, 0.959);
+    box-shadow: 0 8px 25px #00000056;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .5s;
+}
+
+ul li:hover{
+    width: 180px;
+    background-color: #ffffff;
+}
+
+
+ul li span {
+    position: absolute;
+}
+
+
+
+ul li .icon{
+    color: #ccc;
+    font-size: 4.2emf;
+    transition: .5s;
+    
+}
+
+ul li .text{
+    color: #ffffff;
+    font-size: 18px;
+    transform: scale(0);
+    transition: .5s;
+    transition-delay: 0s;
+}
+
+
+ul li:hover .text{
+    transform: scale(1);
+}
+
+
+ul li:hover .icon{
+    transform: scale(0);
+}
+
+
+a{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+
+body{background-image: url(/background/background.jpg);
+  
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;}
+
+h1{text-align: center;}
+
+
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 65px;
+
+}
+
+ul li:hover::before{
+    opacity: 1;}
+
+
+
+    header {
+        
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .central-header {
+        display: flex;
+        gap: 40px;
+      }
+      
+      /* Estilos dos Links */
+      .central-header a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      
+      .central-header a:hover {
+        color: #0765f1; /* Cor ao passar o mouse */
+      }
+   
+  
+
+    

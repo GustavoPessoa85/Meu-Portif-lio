@@ -1,0 +1,164 @@
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Fundo */
+.background {
+    background-image: url(/background/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+nav h2 {
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+span {
+    color: rgb(4, 92, 255);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+   
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #0765f1;
+    transform: scale(1.2);
+}
+
+/* Botão */
+.bnt {
+    background-color: rgba(180, 180, 180, 0.096);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 25px;
+    border-radius: 28px;
+    transition: transform 0.5s;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.329);
+}
+
+.bnt:hover {
+    transform: scale(1.2);
+    color: #0765f1;
+}
+
+/* Texto Principal */
+.Main {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h4 {
+    color: #020202;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.Container-btn {
+    background-color: rgba(180, 180, 180, 0.096);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 25px 35px;
+    border-radius: 28px;
+    transition: transform 0.5s;
+    display: inline-block;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.445);
+}
+
+.Container-btn:hover {
+    color: #0765f1;
+    transform: scale(1.1);
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Empilhar logo e menu */
+        align-items: center; /* Centralizar conteúdo */
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Manter itens da lista na horizontal */
+        flex-wrap: wrap; /* Permitir quebra de linha, se necessário */
+        justify-content: center; /* Centralizar itens */
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Manter itens lado a lado */
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .Main {
+        position: static;
+        transform: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .Container-btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+}
