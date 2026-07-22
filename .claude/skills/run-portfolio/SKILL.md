@@ -148,17 +148,23 @@ done
   system are the three flagship projects (all proprietary/internal, no
   public demo or repo — presented in the "Experiência" section as
   `sistema interno` cards, not linked). PHP (7.4/8.1/8.3, CodeIgniter,
-  Laravel) is solid complementary experience for legacy-system maintenance
-  (vet clinic, plastic surgery clinic, recruitment system, glucose
-  monitoring w/ AI alerts) — don't frame him as "a PHP dev," he's a
-  back-end dev who works across PHP and .NET.
+  Laravel) is **not just legacy maintenance** — he directly said (2026-07-21)
+  he also *builds* corporate systems in PHP, in addition to maintaining
+  ones like a vet clinic and a plastic-surgery clinic system. Don't frame
+  him as "a PHP dev" — he's a back-end dev who works across PHP and .NET.
+- He also builds AI-support APIs in PHP: image/video upload+optimization
+  via **Cloudflare**, mass email dispatch, and WhatsApp integration. This
+  is real production work (per his own description, not just résumé
+  inference) — keep it in the hero/Sobre/Experiência copy and in the
+  Back-end (PHP) + Infraestrutura & DevOps skill cards.
 - Also has real DevOps/cloud breadth from the résumé: Docker, CI/CD, Git
   Flow, Linux server management, Apache/Nginx, SQL Server (in addition to
-  MariaDB/MySQL), and AWS (EC2, ECS, RDS, S3, CloudWatch) as "estudos
-  aplicados" (applied study, not production claim — keep that qualifier).
-  Location: Fortaleza, CE. ADS at Cruzeiro do Sul Virtual, conclusão
-  prevista **2027** (not "último semestre" — that was also a past
-  mistake).
+  MariaDB/MySQL), Cloudflare, and AWS (EC2, ECS, RDS, S3, CloudWatch) as
+  "estudos aplicados" (applied study, not production claim — keep that
+  qualifier for AWS specifically; Cloudflare is production, not "estudos
+  aplicados"). Location: Fortaleza, CE. ADS at Cruzeiro do Sul Virtual,
+  conclusão prevista **2027** (not "último semestre" — that was also a
+  past mistake).
 - No profile photo currently (removed by request; original selfie wasn't
   considered professional enough). The "Sobre" section is text/badges
   only. If a better photo is provided later, re-add an image block —
@@ -172,3 +178,20 @@ done
   on GitHub Pages (checked via `curl -o /dev/null -w "%{http_code}"
   https://gustavopessoa85.github.io/<repo>/`) — `Jogo-da-velha` for example
   exists but has no Pages deploy, so it's intentionally not linked.
+- Visual direction (as of 2026-07-21, committed `b265623`, pushed to
+  `origin/main`): moved from a navy-tinted dark theme to a **neutral
+  black/white palette + one accent** (single blue, HSL-based so both
+  themes share hue/saturation and only shift lightness), tighter geometric
+  radii (10–14px, not pill-shaped cards/buttons), and **Space Grotesk**
+  for headings instead of Poppins — explicitly requested as "moderno,
+  tecnológico, masculino." A light/dark toggle lives in the navbar
+  (`#theme-toggle`), sets `[data-theme]` on `<html>`, respects OS
+  `prefers-color-scheme` on first visit, and persists the user's choice
+  via `localStorage['theme']`. The init script is inline in `<head>`
+  (before `styles/main.css` loads) specifically to avoid a flash of the
+  wrong theme — don't move that logic into `js/main.js`.
+- If asked to touch colors again: the whole palette is driven by CSS
+  custom properties in `:root` / `:root[data-theme="light"]` in
+  `styles/main.css` — accent tint backgrounds use
+  `hsl(var(--accent-h) var(--accent-s) var(--accent-l) / <alpha>)`, don't
+  reintroduce hardcoded `rgba(37,99,235,...)` literals.
